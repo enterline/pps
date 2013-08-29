@@ -12,5 +12,10 @@ namespace PerfectPlacement.Controllers
 		{
 			return View();
 		}
+
+        public ActionResult JobSearch()
+        {
+            return View();
+        }
 	}
 }

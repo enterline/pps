@@ -18,6 +18,11 @@ namespace PerfectPlacement.Controllers
 		{
 			return View();
 		}
+
+        public ActionResult New()
+        {
+            return View();
+        }
 		
 		public ActionResult Success()
 		{

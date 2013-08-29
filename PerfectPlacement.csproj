@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <ProjectGuid>{9B5C29D0-647D-4618-9D0F-AC7CB74EE53D}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,7 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <UseIISExpress>False</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <SignAssembly>False</SignAssembly>
     <DelaySign>False</DelaySign>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -19,6 +20,15 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <RunCodeAnalysis>False</RunCodeAnalysis>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -751,6 +761,7 @@
     <None Include="Scripts\modernizr-2.5.3.js" />
     <None Include="Views\AboutUs\Index.cshtml" />
     <None Include="Views\Apply\Index.cshtml" />
+    <Content Include="Views\Apply\New.cshtml" />
     <None Include="Views\Apply\Success.cshtml" />
     <None Include="Views\ComingSoon\backup.html" />
     <None Include="Views\ComingSoon\Index.cshtml" />
@@ -764,6 +775,7 @@
     <None Include="Views\Home\ComingSoon.cshtml" />
     <None Include="Views\Jobs\Apply.cshtml" />
     <None Include="Views\Jobs\Index.cshtml" />
+    <Content Include="Views\Jobs\JobSearch.cshtml" />
     <None Include="Views\Shared\_Footer.cshtml" />
     <None Include="Views\Shared\_FooterCallout.cshtml" />
     <None Include="Views\Shared\_Head.cshtml" />
@@ -776,78 +788,32 @@
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\bootstrap" />
-    <Folder Include="Content\bootstrap\css" />
-    <Folder Include="Content\bootstrap\img" />
-    <Folder Include="Content\bootstrap\js" />
-    <Folder Include="Content\foundation" />
-    <Folder Include="Content\foundation\images" />
-    <Folder Include="Content\foundation\images\foundation" />
-    <Folder Include="Content\foundation\images\foundation\orbit" />
-    <Folder Include="Content\foundation\javascripts" />
-    <Folder Include="Content\foundation\stylesheets" />
-    <Folder Include="Content\images" />
-    <Folder Include="Content\styles" />
-    <Folder Include="Content\styles\kendo" />
-    <Folder Include="Content\styles\kendo\Black" />
-    <Folder Include="Content\styles\kendo\BlueOpal" />
-    <Folder Include="Content\styles\kendo\Default" />
-    <Folder Include="Content\styles\kendo\Metro" />
-    <Folder Include="Content\styles\kendo\source" />
-    <Folder Include="Content\styles\kendo\Silver" />
-    <Folder Include="Content\styles\kendo\source\Black" />
-    <Folder Include="Content\styles\kendo\source\BlueOpal" />
-    <Folder Include="Content\styles\kendo\source\Default" />
-    <Folder Include="Content\styles\kendo\source\Metro" />
-    <Folder Include="Content\styles\kendo\source\Silver" />
-    <Folder Include="Content\styles\kendo\source\textures" />
-    <Folder Include="Content\styles\kendo\textures" />
-    <Folder Include="Content\theme" />
-    <Folder Include="Content\theme\contact-form" />
-    <Folder Include="Content\theme\contact-form\assets" />
-    <Folder Include="Content\theme\contact-form\js" />
-    <Folder Include="Content\theme\contact-form\twitter" />
-    <Folder Include="Content\theme\contact-form\verify" />
-    <Folder Include="Content\theme\content-images" />
-    <Folder Include="Content\theme\content-images\out183x276" />
-    <Folder Include="Content\theme\content-images\out197x133" />
-    <Folder Include="Content\theme\content-images\out280x124" />
-    <Folder Include="Content\theme\content-images\out280x179" />
-    <Folder Include="Content\theme\content-images\out280x354" />
-    <Folder Include="Content\theme\content-images\out445x273" />
-    <Folder Include="Content\theme\content-images\out620x161" />
-    <Folder Include="Content\theme\css" />
-    <Folder Include="Content\theme\images" />
-    <Folder Include="Content\theme\images\banner-overlays" />
-    <Folder Include="Content\theme\images\global" />
-    <Folder Include="Content\theme\images\global\prettyPhoto" />
-    <Folder Include="Content\theme\images\global\prettyPhoto\light_square" />
-    <Folder Include="Content\theme\images\internetExplorer" />
-    <Folder Include="Content\theme\images\prettyPhoto" />
-    <Folder Include="Content\theme\images\prettyPhoto\default" />
-    <Folder Include="Content\theme\images\shadows" />
-    <Folder Include="Content\theme\images\shortcodes" />
-    <Folder Include="Content\theme\images\shortcodes\icons" />
-    <Folder Include="Content\theme\images\skins" />
-    <Folder Include="Content\theme\js" />
-    <Folder Include="Content\webicons" />
-    <Folder Include="Content\webicons\images" />
-    <Folder Include="Models" />
-    <Folder Include="Attachments" />
-    <Folder Include="Views\ComingSoon" />
-    <Folder Include="Views\Contact" />
-    <Folder Include="Views\AboutUs" />
-    <Folder Include="Views\Jobs" />
-    <Folder Include="Views\Apply" />
-    <Folder Include="Views\Error" />
-    <Folder Include="Views\Forms" />
+    <Folder Include="Attachments\" />
+    <Folder Include="Content\bootstrap\img\" />
+    <Folder Include="Content\bootstrap\js\" />
+    <Folder Include="Content\styles\kendo\Black\" />
+    <Folder Include="Content\styles\kendo\BlueOpal\" />
+    <Folder Include="Content\styles\kendo\Default\" />
+    <Folder Include="Content\styles\kendo\Metro\" />
+    <Folder Include="Content\styles\kendo\Silver\" />
+    <Folder Include="Content\styles\kendo\source\Black\" />
+    <Folder Include="Content\styles\kendo\source\BlueOpal\" />
+    <Folder Include="Content\styles\kendo\source\Default\" />
+    <Folder Include="Content\styles\kendo\source\Metro\" />
+    <Folder Include="Content\styles\kendo\source\Silver\" />
+    <Folder Include="Content\styles\kendo\source\textures\" />
+    <Folder Include="Content\styles\kendo\textures\" />
   </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>8080</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
@@ -861,4 +827,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
 </Project>
