@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+   @Html.Partial("_Head")
+   <body>
+		@Html.Partial("_TopToolbar")
+		
+		@Html.Partial("_Header")
+		
+		@Html.Partial("_SmallBanner")
+		
+		@RenderBody()
+		
+		@if(ViewBag.ShowFooterCallout == null || ViewBag.ShowFooterCallout) { @Html.Partial("_FooterCallout") }
+		
+		@Html.Partial("_Footer")
+      
+      <script type="text/javascript" src="content/theme/js/custom-main.js"></script>
+      <script type="text/javascript" src="content/theme/contact-form/js/jquery.jigowatt.js"></script>
+   </body>
+</html>

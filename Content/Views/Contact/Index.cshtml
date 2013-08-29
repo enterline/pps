@@ -1,0 +1,128 @@
+﻿@model PerfectPlacement.Models.ContactViewModel
+@{
+	ViewBag.Title = "Contact Us";
+	Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(33.667925,-112.067285);
+        var mapOptions = {
+          zoom: 12,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Perfect Placement Services, Inc.'
+        });
+      }
+
+      
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+      
+      
+      
+      <!-- START content-container -->
+      <section id="content-container" class="clearfix">
+         <div id="main-wrap" class="clearfix">
+         
+         	<!-- START sidebar -->
+            <aside class="sidebar left-sidebar">
+            <div class="sidebar-widget">
+               <p class="widget-heading">Connect With Us</p>
+               <ul class="social_icons">
+                  <li><a href="http://www.facebook.com/PerfectPlacementServices" class="facebook">Facebook</a></li>
+                  <li><a href="mailto:solutions@pps-az.com" class="email">Email</a></li>
+               </ul>
+            </div>
+            <!-- END sidebar-widget -->
+         
+         
+               
+               <div class="sidebar-widget">
+                  <p class="widget-heading">Contact Details</p>
+                  <div class="contact_details">
+                     <div class="contact_details_wrap">
+                        <p class="address">19820 North 7th Street<br/>Suite 145<br />Phoenix, Arizona 85024</p>
+                        <p class="phone"><strong>phone:</strong> 623.842.2900</p>
+                        <p class="fax"><strong>fax:</strong> 623.842.2904</p>
+                        <p class="email"><strong>email:</strong><br/><a href="mailto:solutions@pps-az.com">solutions@pps-az.com</a></p>
+                     </div>
+                     <!-- END contact_details_wrap -->            
+                  </div>
+               </div>
+            </aside>
+            <!-- END sidebar-->	
+         
+            <div class="page_content_right sub-content">
+               <div class="img-frame small-banner" id="map" style="width: 650px; height: 170px;">&nbsp;</div>
+               <div class="large-callout">
+                  <p>Thank you for your interest in Perfect Placement Services, Inc. We are always interested in your feedback.<br/>All fields are required.</p>
+               </div>
+               
+               @if (!ViewData.ModelState.IsValid) { 
+			  		<div class="notification error closeable">
+			         <p>Error while processing correspondence.</p>
+			         <div style="padding: 10px;">
+			         	@Html.ValidationSummary(true)
+			 		</div>
+			      </div>
+			  	}
+               <!-- START contact -->
+               <div id="contact">
+            @using (Html.BeginForm("Index", "contact", FormMethod.Post)) {
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FullName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.FullName)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Message)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Message)
+        </div>
+        <br/>
+        <p>
+            <input type="submit"class="submit tt-form-submit" value="Send" />
+        </p>
+    </fieldset>
+}
+
+			
+                  
+               </div>
+               <!-- END contact -->   
+               
+                        
+            </div>
+            <!-- END of page_content-->
+
+            
+            
+         </div>
+         <!-- END main-wrap -->
+      </section>
+      <!-- END content-container -->      
+
+
+
+
+
+     

@@ -1,0 +1,5 @@
+C:\Users\Maura\Documents\SharpDevelop Projects\PerfectPlacement\PerfectPlacement\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Maura\Documents\SharpDevelop Projects\PerfectPlacement\PerfectPlacement\bin\PerfectPlacement.dll
+C:\Users\Maura\Documents\SharpDevelop Projects\PerfectPlacement\PerfectPlacement\bin\PerfectPlacement.pdb
+C:\Users\Maura\Documents\SharpDevelop Projects\PerfectPlacement\PerfectPlacement\obj\x86\Debug\PerfectPlacement.dll
+C:\Users\Maura\Documents\SharpDevelop Projects\PerfectPlacement\PerfectPlacement\obj\x86\Debug\PerfectPlacement.pdb
